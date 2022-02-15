@@ -46,6 +46,11 @@
 
 [branch "master"]
   mergeoptions = --no-edit
-[user]
+[user-wadiboom]
 	email = 25089949+WadiBOOM@users.noreply.github.com
 	name = Wadi BM
+[user]
+	email = w410@tutamail.com
+	name = w410x
+[init]
+	defaultBranch = master

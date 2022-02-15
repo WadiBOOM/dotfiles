@@ -19,7 +19,7 @@ type -a rbenv > /dev/null && eval "$(rbenv init -)"
 
 # Load pyenv (To manage your Python versions)
 export PATH="${HOME}/.pyenv/bin:${PATH}" # Needed for Linux/WSL
-type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)"
+type -a pyenv > /dev/null && eval "$(pyenv init --path)" #&& eval "$(pyenv virtualenv-init -)"
 
 # Load nvm if installed (To manage your Node versions)
 export NVM_DIR="$HOME/.nvm"
@@ -31,8 +31,8 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
 
 # Load 'lewagon' virtualenv for the Data Bootcamp. You can comment these 2 lines to disable this behavior.
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-pyenv activate lewagon 2>/dev/null && echo "🐍 Loading 'lewagon' virtualenv"
+# export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+# pyenv activate lewagon 2>/dev/null && echo "🐍 Loading 'lewagon' virtualenv"
 
 # Store your own aliases in the ~/.aliases file and load the here.
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
@@ -42,11 +42,8 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
-export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
-export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
-export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
-export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
